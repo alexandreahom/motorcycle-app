@@ -1,0 +1,37 @@
+<%- include("../partials/html-head") %>
+<link rel="stylesheet" href="/stylesheets/motorcycles/new.css">
+<%- include("../partials/nav") %> 
+
+<main>
+  <h1><%= title %></h1>
+  <form action="/motorcycles">
+    <label for="moto-name">Make:
+      <section name="make">
+        <input type="text">
+      </section>
+    </label>
+    <label for="brand-name">Model:
+      <section name="model">
+        <input type="text">
+      </section>
+    </label>
+    <label for="moto-price">MSRP:
+      <section name="mspr">
+        <input type="text">
+      </section>
+    </label>
+    <label for="moto-power">Horsepower:
+      <section name="hp">
+        <input type="text">
+      </section>
+    </label>
+    <label for="moto-cc">Displacement:
+      <section name="cc">
+        <input type="text">
+      </section>
+    </label>
+    <button type="submit">Add Motorcycle</button>
+  </form>
+</main>
+
+<%- include("../partials/footer") %>  

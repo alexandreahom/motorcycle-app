@@ -3,6 +3,7 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 const motoSchema = new Schema({
+  name: String,
   brand: {
     type: String,
   },

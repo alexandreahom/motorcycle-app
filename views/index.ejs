@@ -1,8 +1,9 @@
 <%- include('./partials/html-head') %>
 <%- include('./partials/nav') %>
 
-<main>
-  <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
+<main name="homepage">
+  <h1>Hey, <%= user ? user.profile.name : "Motorcycle lover!" %></h1>
+  <p></p>
   <% if (user?.profile.avatar) { %>
     <div>
       <img

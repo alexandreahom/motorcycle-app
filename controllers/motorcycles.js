@@ -15,8 +15,27 @@ function index(req, res) {
   })
 }
 
+function motoNew( req, res) {
+  res.render('motorcycles/new', {
+    title: 'Add Motorcycle'
+  })
+}
 
+function create(req, res) {
+  req.body.owner = req.user.profile._id
+  Motorcycle.create(req.body)
+  .then(motorcycle => {
+    res.redirect('/motorcycles')
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/motorcycles/new")
+  })
+}
 
 export {
   index,
+  create,
+  motoNew as new,
+
 }

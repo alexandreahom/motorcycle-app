@@ -2,8 +2,17 @@
 <%- include('../partials/nav') %>
 
 <section>
-  <h1>Motorcycles</h1>
-  <h2>All the Motorcycles</h2>
+  <h1>All Motorcycles</h1>
+  <% if (user) { %>
+    <h2>Add a Motorcycle!</h2>
+    <form action="/motorcycles" method="POST">
+      <label for="">
+        Name:
+        <input type="text" name="name" autocomplete="off">
+      </label>
+      <button type="submit">Add Motorcycle</button>
+    </form>
+  <% } %>
 </section>
 
 <%- include('../partials/footer') %>
