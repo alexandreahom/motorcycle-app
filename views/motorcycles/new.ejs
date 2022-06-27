@@ -4,32 +4,15 @@
 
 <main>
   <h1><%= title %></h1>
-  <form action="/motorcycles">
-    <label for="moto-name">Make:
-      <section name="make">
-        <input type="text">
-      </section>
-    </label>
-    <label for="brand-name">Model:
-      <section name="model">
-        <input type="text">
-      </section>
-    </label>
-    <label for="moto-price">MSRP:
-      <section name="mspr">
-        <input type="text">
-      </section>
-    </label>
-    <label for="moto-power">Horsepower:
-      <section name="hp">
-        <input type="text">
-      </section>
-    </label>
-    <label for="moto-cc">Displacement:
-      <section name="cc">
-        <input type="text">
-      </section>
-    </label>
+  <form id="new-form" action="/motorcycles" method="POST">
+    <label for="make-input">Make:</label>
+    <input type="text" name="make" id="make-input" autocomplete="off">
+    <label for="model-input">Model:</label>
+    <input type="text" name="model" id="model-input" autocomplete="off">
+    <label for="mspr-input">MSPR:</label>
+    <input type="text" name="mspr" id="mspr-input" autocomplete="off">
+    <label for="horsepower-input">Horsepower:</label>
+    <input type="text" name="horsepower" id="horsepower-input" autocomplete="off">
     <button type="submit">Add Motorcycle</button>
   </form>
 </main>

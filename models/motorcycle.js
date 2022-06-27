@@ -4,16 +4,16 @@ const Schema = mongoose.Schema
 
 const motoSchema = new Schema({
   name: String,
-  brand: {
+  make: {
+    type: String,
+  },
+  model: {
     type: String,
   },
   mspr: {
     type: Number,
   },
   horsepower: {
-    type: Number,
-  },
-  displacement: {
     type: Number,
   },
   owner: {type: Schema.Types.ObjectId, ref: "Profile"}

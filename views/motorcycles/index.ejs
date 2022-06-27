@@ -1,18 +1,21 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/motorcycles/index.css" />
 <%- include('../partials/nav') %>
 
-<section>
-  <h1>All Motorcycles</h1>
-  <% if (user) { %>
-    <h2>Add a Motorcycle!</h2>
-    <form action="/motorcycles" method="POST">
-      <label for="">
-        Name:
-        <input type="text" name="name" autocomplete="off">
-      </label>
-      <button type="submit">Add Motorcycle</button>
-    </form>
-  <% } %>
-</section>
+<main>
+  <h1>All motorcycles</h1>
+  <% motorcycles.forEach( motorcycle => { %>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= motorcycle.make %></h5>
+      <h6 class="card-subtitle mb-2 text-muted"><%= motorcycle.model %></h6>
+      <p class="card-text"><%= motorcycle.mspr %></p>
+      <p class="card-text"><%= motorcycle.horsepower %></p>
+      <a href="/motorcycles/<%= motorcycle._id %>">Details</a>
+    </div>
+  </div>
+  
+  <% }) %>
+</main>
 
 <%- include('../partials/footer') %>
