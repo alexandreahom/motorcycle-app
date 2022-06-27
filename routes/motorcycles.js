@@ -8,6 +8,10 @@ router.get('/', motoCtrl.index)
 
 router.get('/new', motoCtrl.new)
 
+router.get('/:id', motoCtrl.show)
+
+router.get('/:id/edit', isLoggedIn, motoCtrl.edit)
+
 router.post('/', isLoggedIn, motoCtrl.create)
 
 export {

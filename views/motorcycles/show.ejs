@@ -1,0 +1,33 @@
+<%- include("../partials/html-head") %>
+<link rel="stylesheet" href="/stylesheets/motorcycles/style.css">
+<%- include("../partials/nav") %>
+
+<main>
+  <h1><%= title %></h1>
+  <div>Make: </div>
+  <div>
+    <%= motorcycle.make %>
+  </div>
+  <div>Model: </div>
+  <div>
+    <%= motorcycle.model %>
+  </div>
+  <div>MSPR: </div>
+  <div>
+    <%= motorcycle.mspr %>
+  </div>
+  <div>Horsepower: </div>
+  <div>
+    <%= motorcycle.horsepower %>
+  </div>
+  <% if (motorcycle.owner.equals(user?.profile._id)) { %>
+    <form action="/motorcycles/<%= motorcycle._id %>/edit">
+      <button class="btn" type="submit">Edit Motorcycle</button>
+    </form>
+    <form action="/motorcycles/<%= motorcycle._id %>?_method=DELETE" method="POST">
+      <button class="btn" type="submit">Delete this Motorcycle</button>
+    </form>
+  <% } %>
+</main>
+
+<%- include("../partials/footer") %> 

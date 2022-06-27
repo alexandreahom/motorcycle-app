@@ -33,9 +33,38 @@ function create(req, res) {
   })
 }
 
+function show(req, res) {
+  Motorcycle.findById(req.params.id)
+  .then(motorcycle => {
+    res.render('motorcycles/show', {
+      title: "Motorcycle Detail",
+      motorcycle,
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/motorcycles")
+  })
+}
+
+function edit(req, res) {
+  Motorcycle.findById(req.params.id)
+  .then(motorcycle => {
+    res.render('motorcycles/edit', {
+      motorcycle,
+      title: "edit"
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/motorcycles")
+  })
+}
+
 export {
   index,
   create,
   motoNew as new,
-
+  show,
+  edit,
 }
