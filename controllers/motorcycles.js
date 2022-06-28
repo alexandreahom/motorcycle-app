@@ -33,6 +33,17 @@ function create(req, res) {
   })
 }
 
+function createReview(req, res) {
+  Motorcycle.findById(req.params.id)
+  .then(motorcycle => {
+    motorcycle.reviews.push(req.body)
+    motorcycle.save()
+    .then(() => {
+      res.redirect(`/motorcycles/${motorcycle._id}`)
+    })
+  })
+}
+
 function show(req, res) {
   Motorcycle.findById(req.params.id)
   .then(motorcycle => {
@@ -79,5 +90,5 @@ export {
   show,
   edit,
   deleteMoto as delete,
-  
+  createReview,
 }

@@ -13,6 +13,7 @@ router.get('/:id', motoCtrl.show)
 router.get('/:id/edit', isLoggedIn, motoCtrl.edit)
 
 router.post('/', isLoggedIn, motoCtrl.create)
+router.post('/:id/reviews', motoCtrl.createReview)
 
 router.delete('/:id', motoCtrl.delete)
 

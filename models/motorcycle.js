@@ -2,6 +2,12 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
+const reviewSchema = new Schema({
+  content: String,
+}, {
+  timestamps: true
+})
+
 const motoSchema = new Schema({
   name: String,
   make: {
@@ -16,7 +22,9 @@ const motoSchema = new Schema({
   horsepower: {
     type: Number,
   },
-  owner: {type: Schema.Types.ObjectId, ref: "Profile"}
+  owner: {type: Schema.Types.ObjectId, ref: "Profile"},
+  
+  reviews: [reviewSchema]
 }, {
   timestamps: true
 })
