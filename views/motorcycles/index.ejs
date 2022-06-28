@@ -7,10 +7,10 @@
   <% motorcycles.forEach( motorcycle => { %>
   <div class="card" style="width: 18rem;">
     <div class="card-body">
-      <h5 class="card-title"><%= motorcycle.make %></h5>
-      <h6 class="card-subtitle mb-2 text-muted"><%= motorcycle.model %></h6>
-      <p class="card-text"><%= motorcycle.mspr %></p>
-      <p class="card-text"><%= motorcycle.horsepower %></p>
+      <h5 class="card-title">Make: <%= motorcycle.make %></h5>
+      <h6 class="card-subtitle mb-2 text-muted">Model: <%= motorcycle.model %></h6>
+      <p class="card-text">MSPR: <%= motorcycle.mspr %></p>
+      <p class="card-text">Horsepower: <%= motorcycle.horsepower %></p>
       <a href="/motorcycles/<%= motorcycle._id %>">Details</a>
     </div>
   </div>

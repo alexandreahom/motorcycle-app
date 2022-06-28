@@ -8,7 +8,7 @@ const motoSchema = new Schema({
     type: String,
   },
   model: {
-    type: String,
+    type: Object,
   },
   mspr: {
     type: Number,
