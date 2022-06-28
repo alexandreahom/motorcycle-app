@@ -61,10 +61,23 @@ function edit(req, res) {
   })
 }
 
+function deleteMoto(req, res) {
+  Motorcycle.findByIdAndDelete(req.params.id)
+  .then(() => {
+    res.redirect('/motorcycles')
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/")
+  })
+}
+
 export {
   index,
   create,
   motoNew as new,
   show,
   edit,
+  deleteMoto as delete,
+  
 }

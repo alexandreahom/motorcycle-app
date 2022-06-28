@@ -14,6 +14,8 @@ router.get('/:id/edit', isLoggedIn, motoCtrl.edit)
 
 router.post('/', isLoggedIn, motoCtrl.create)
 
+router.delete('/:id', motoCtrl.delete)
+
 export {
   router
 }
