@@ -62,7 +62,7 @@ section {
 }
 
 a {
-  color: blue;
+  color: blueviolet;
 }
 
 pre {
@@ -80,6 +80,8 @@ nav > a {
 
 .btn {
   margin: 16px 0;
+  color: blueviolet;
+  background-color: white;
 }
 
 .link {
