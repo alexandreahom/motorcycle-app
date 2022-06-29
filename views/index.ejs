@@ -3,7 +3,7 @@
 <%- include('./partials/nav') %>
 
 <main name="homepage">
-  <h1>Hey, <%= user ? user.profile.name : "Motorcycle lover!" %></h1>
+  <h1>Welcome, <%= user ? user.profile.name : "Motorcycle lover!" %></h1>
   <p></p>
   <% if (user?.profile.avatar) { %>
     <div>

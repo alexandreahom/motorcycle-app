@@ -1,25 +1,15 @@
 <%- include("../partials/html-head") %>
-<link rel="stylesheet" href="/stylesheets/motorcycles/style.css">
+<link rel="stylesheet" href="/stylesheets/motorcycles/show.css">
 <%- include("../partials/nav") %>
 
 <main>
+  <form action="">
   <h1><%= title %></h1>
-  <div>Make: </div>
-  <div>
-    <%= motorcycle.make %>
-  </div>
-  <div>Model: </div>
-  <div>
-    <%= motorcycle.model %>
-  </div>
-  <div>MSPR: </div>
-  <div>
-    <%= motorcycle.mspr %>
-  </div>
-  <div>Horsepower: </div>
-  <div>
-    <%= motorcycle.horsepower %>
-  </div>
+  <div>Make: <%= motorcycle.make %></div>
+  <div>Model: <%= motorcycle.model %></div>
+  <div>MSPR: <%= motorcycle.mspr %></div>
+  <div>Horsepower: <%= motorcycle.horsepower %></div>
+</form><br>
   <% if (motorcycle.owner.equals(user?.profile._id)) { %>
     <form action="/motorcycles/<%= motorcycle._id %>/edit">
       <button class="btn" type="submit">Edit Motorcycle</button>
@@ -28,14 +18,14 @@
       <button class="btn" type="submit">Delete this Motorcycle</button>
     </form>
   <% } %>
+  <h2>Reviews</h2>
   <% if (user) { %>
-    <h2>Reviews</h2>
     <form action="/motorcycles/<%= motorcycle._id %>/reviews" method="POST">
-      <label for="content-textarea">Review:</label>
+      <label for="content-textarea"> Add Review:</label>
       <textarea name="content" id="content-textarea"></textarea>
       <button type="submit">Add Review</button>
     </form>
-  <% } %>
+  <% } %> <br>
   <% if (motorcycle.reviews.length) { %>
     <table>
       <tbody>
