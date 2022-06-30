@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="/stylesheets/motorcycles/edit.css">
 <%- include("../partials/nav") %>
 
-<main id="edit-page">
+<main class="edit-page">
     <h1>Edit Motorcycle</h1>
     <form id="new-form" action="/motorcycles/<%= motorcycle._id %>?_method=PUT" method="POST">
         <label for="make-input">Make:</label>

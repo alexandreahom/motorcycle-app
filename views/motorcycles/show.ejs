@@ -2,14 +2,15 @@
 <link rel="stylesheet" href="/stylesheets/motorcycles/show.css">
 <%- include("../partials/nav") %>
 
-<main id="details-page">
-  <form action="">
-  <h1><%= title %></h1>
-  <div>Make: <%= motorcycle.make %></div>
-  <div>Model: <%= motorcycle.model %></div>
-  <div>MSPR: <%= motorcycle.mspr %></div>
-  <div>Horsepower: <%= motorcycle.horsepower %></div>
-</form><br>
+<main class="details-page">
+  <form id="moto-detail" action="">
+    <h1><%= title %></h1>
+    <div>Make: <%= motorcycle.make %></div>
+    <div>Model: <%= motorcycle.model %></div>
+    <div>MSPR: <%= motorcycle.mspr %></div>
+    <div>Horsepower: <%= motorcycle.horsepower %></div>
+  </form>
+  <section class="edit-input">
   <% if (motorcycle.owner.equals(user?.profile._id)) { %>
     <form action="/motorcycles/<%= motorcycle._id %>/edit">
       <button class="btn" type="submit">Edit Motorcycle</button>
@@ -18,28 +19,31 @@
       <button class="btn" type="submit">Delete this Motorcycle</button>
     </form>
   <% } %>
+  </section> 
+  <section class="reviews">
   <h2>Reviews</h2>
-  <% if (user) { %>
-    <form action="/motorcycles/<%= motorcycle._id %>/reviews" method="POST">
-      <label for="content-textarea"> Add Review:</label>
-      <textarea name="content" id="content-textarea"></textarea>
-      <button type="submit">Add Review</button>
-    </form>
-  <% } %> <br>
-  <% if (motorcycle.reviews.length) { %>
-    <table>
-      <tbody>
-        <% motorcycle.reviews.forEach(function(review) { %>
-          <tr>
-            <td><%= review.createdAt.toLocaleDateString() %></td>
-            <td><%= review.content %></td>
-          </tr>
-        <% }) %>
-      </tbody>
-    </table>
-  <% } else { %>
-    <h3>No Reviews Yet</h3>
-  <% } %>
+    <% if (user) { %>
+      <form action="/motorcycles/<%= motorcycle._id %>/reviews" method="POST">
+        <label for="content-textarea"> Add Review:</label><br>
+        <textarea name="content" id="content-textarea"></textarea><br>
+        <button type="submit">Add Review</button>
+      </form>
+    <% } %> <br>
+    <% if (motorcycle.reviews.length) { %>
+      <table>
+        <tbody>
+          <% motorcycle.reviews.forEach(function(review) { %>
+            <tr>
+              <td><%= review.content %></td> 
+              <td>- <%= review.createdAt.toLocaleDateString() %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    <% } else { %>
+      <h3>No Reviews Yet</h3>
+    <% } %>
+  </section>
 </main>
 
 <%- include("../partials/footer") %> 

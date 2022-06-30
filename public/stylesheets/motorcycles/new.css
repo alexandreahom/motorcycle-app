@@ -5,12 +5,18 @@
   grid-gap: 30px;
   font-size: 20px;
   text-align: center;
+  background: url('/images/motorcycle-05.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100%
 }
 
 
 label {
   color: rgb(255, 136, 0);
-  background-color: rgb(53, 0, 4);
+  text-shadow: 0px 4px 4px rgb(53, 0, 4);
   border-radius: 50px;
   margin: 20px;
 }

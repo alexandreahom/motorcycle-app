@@ -23,11 +23,22 @@ body {
 }
 
 .homepage {
-  color: white;
-  background: url('/images/motorcycleheader.jpeg');
+  color: rgb(255, 136, 0);
+  background-image: url('/images/motorcycleheader.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  height: 100vh;
+  width: 100%
+}
+
+.home {
+  position: absolute;
+  top: 30%;
+  left: 20px;
+  font-size: 18px;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgb(53, 0, 4);
 }
 
 nav {
@@ -37,6 +48,9 @@ nav {
   justify-content: center;
 }
 
+a:hover {
+  color: white;
+}
 
 main {
   display: flex;
@@ -48,15 +62,17 @@ main {
 h1 {
   margin-top: 20px;
   font-size: 36px;
-  color: white;
+  color: rgb(255, 136, 0);
 }
 
 h2 {
   font-size: 30px;
+  color: rgb(255, 136, 0);
 }
 
 h3 {
   font-size: 24px;
+  color: rgb(255, 136, 0);
 }
 
 ul {
@@ -69,11 +85,12 @@ p, label, li, button, input {
 
 label {
   font-weight: bold;
+  color: rgb(255, 136, 0);
 }
 
-section {
+/* section {
   padding: 50px;
-}
+} */
 
 a {
   color: rgb(255, 136, 0);
@@ -81,6 +98,10 @@ a {
 
 pre {
   font-size: 14px;
+}
+
+tr {
+  color: rgb(255, 136, 0);
 }
 
 nav > a {
@@ -103,6 +124,7 @@ nav > a {
   font-size: 18px;
   display: inline-block;
 }
+
 
 .profile-avatar {
   margin-top: 50px;
