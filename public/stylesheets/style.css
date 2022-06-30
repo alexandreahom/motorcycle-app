@@ -94,3 +94,6 @@ nav > a {
   margin-top: 50px;
 }
 
+#homepic {
+  background-size: cover;
+}
