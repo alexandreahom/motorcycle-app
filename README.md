@@ -1,12 +1,11 @@
 ## Motorcycle App
-![ALT](public/images/motoss.png)
+![ALT](public/images/unknown%20(2).png)
 This App is used to track your favorite motorcycles! 
 
 You can add motorcycles.
 ![ALT](public/images/unknown%20(1).png)
 
 Edit/delete your own motorcycle.
-![ALT](public/images/unknown%20(2).png)
 
 
 ## Deployment Links
