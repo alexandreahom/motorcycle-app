@@ -39,6 +39,7 @@ body {
   font-size: 18px;
   text-align: center;
   text-shadow: 0px 4px 4px rgb(53, 0, 4);
+  background-color: rgba(0, 0, 0, 0.212);
 }
 
 nav {
