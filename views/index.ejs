@@ -3,11 +3,13 @@
 <%- include('./partials/nav') %>
 
 <main class="homepage">
-  <h1>Welcome, <%= user ? user.profile.name : "Motorcycle lover!" %></h1>
-  <p></p>
+  <h1>Welcome, <%= user ? user.profile.name : "Motorcycle lovers!" %></h1>
+  <section>
     <div>
-      <img id="homepic" src="/public/images/motorcycleheader.jpeg" alt="">
+      <h3>Want to share and see what type of motorcycles people like?</h3>
+      <h3>Login and start adding your favorite motorcycles!</h3>
     </div>
+  </section>
 </main>
 
 <%- include('./partials/footer') %>

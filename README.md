@@ -13,25 +13,25 @@ Heroku: https://alexandrea-motorcycle-app.herokuapp.com/
 
 ## Teachnologies Used
 
-HTML,
+- HTML
 
-CSS,
+- CSS
 
-JavaScript,
+- JavaScript
 
-Node,
+- Node
 
-Express,
+- Express
 
-Google OAuth,
+- Google OAuth
 
-MongoDB,
+- MongoDB
 
-Mongoose,
+- Mongoose
 
-Bootstrap,
+- Bootstrap
 
-Heroku
+- Heroku
 
 
 ## Credits
