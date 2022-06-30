@@ -8,9 +8,7 @@ You can add motorcycles.
 Edit/delete your own motorcycle.
 
 
-## Deployment Links
-
-Github: https://github.com/alexandreahom/motorcycle-app
+## Deployment Link
 
 Deployment: https://alexandrea-motorcycle-app.herokuapp.com/
 
