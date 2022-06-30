@@ -1,4 +1,4 @@
-.card {
-    margin: 10px 10px 10px 10px;
-    display: inline;
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
 }

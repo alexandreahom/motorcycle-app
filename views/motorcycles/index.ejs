@@ -2,19 +2,20 @@
 <link rel="stylesheet" href="/stylesheets/motorcycles/index.css" />
 <%- include('../partials/nav') %>
 
-<main>
+<main id="all-page">
   <h1>All motorcycles</h1>
-  <% motorcycles.forEach( motorcycle => { %>
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">Make: <%= motorcycle.make %></h5>
-      <h6 class="card-subtitle mb-2 text-muted">Model: <%= motorcycle.model %></h6>
-      <p class="card-text">MSPR: <%= motorcycle.mspr %></p>
-      <p class="card-text">Horsepower: <%= motorcycle.horsepower %></p>
-      <a href="/motorcycles/<%= motorcycle._id %>">Details</a>
+  <section id="card-container">
+    <% motorcycles.forEach( motorcycle => { %>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Make: <%= motorcycle.make %></h5>
+        <h6 class="card-subtitle mb-2 text-muted">Model: <%= motorcycle.model %></h6>
+        <p class="card-text">MSPR: <%= motorcycle.mspr %></p>
+        <p class="card-text">Horsepower: <%= motorcycle.horsepower %></p>
+        <a href="/motorcycles/<%= motorcycle._id %>">Details</a>
+      </div>
     </div>
-  </div>
-  
+  </section>
   <% }) %>
 </main>
 

@@ -2,17 +2,17 @@
 <link rel="stylesheet" href="/stylesheets/motorcycles/edit.css">
 <%- include("../partials/nav") %>
 
-<main>
+<main id="edit-page">
     <h1>Edit Motorcycle</h1>
     <form id="new-form" action="/motorcycles/<%= motorcycle._id %>?_method=PUT" method="POST">
         <label for="make-input">Make:</label>
-        <input type="text" name="make" id="make-input" autocomplete="off">
+        <input type="text" name="make" id="make-input" autocomplete="off" value="<%= motorcycle.make %>">
         <label for="model-input">Model:</label>
-        <input type="text" name="model" id="model-input" autocomplete="off">
+        <input type="text" name="model" id="model-input" autocomplete="off" value="<%= motorcycle.model %>">
         <label for="mspr-input">MSPR:</label>
-        <input type="text" name="mspr" id="mspr-input" autocomplete="off">
+        <input type="text" name="mspr" id="mspr-input" autocomplete="off" value="<%= motorcycle.mspr %>">
         <label for="horsepower-input">Horsepower:</label>
-        <input type="text" name="horsepower" id="horsepower-input" autocomplete="off">
+        <input type="text" name="horsepower" id="horsepower-input" autocomplete="off" value="<%= motorcycle.horsepower %>">
         <button type="submit">Save Motorcycle</button>
     </form>
 </main>

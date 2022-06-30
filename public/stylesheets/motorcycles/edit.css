@@ -1,6 +1,13 @@
-form {
-    display: grid;
+.edit-page {
+    display: flex;
     grid-gap: 30px;
     font-size: 20px;
     text-align: center;
+}
+
+label {
+    color: rgb(255, 136, 0);
+    background-color: rgb(53, 0, 4);
+    border-radius: 20px;
+    margin: 20px;
 }
