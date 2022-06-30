@@ -12,7 +12,7 @@ Edit/delete your own motorcycle.
 
 Github: https://github.com/alexandreahom/motorcycle-app
 
-Heroku: https://alexandrea-motorcycle-app.herokuapp.com/
+Deployment: https://alexandrea-motorcycle-app.herokuapp.com/
 
 ## Teachnologies Used
 
