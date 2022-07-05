@@ -6,15 +6,15 @@
   <h1>All Motorcycles</h1>
   <section class="cardContainer">
     <% motorcycles.forEach( motorcycle => { %>
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Make: <%= motorcycle.make %></h5>
-        <h5 class="card-subtitle mb-2">Model: <%= motorcycle.model %></h5>
-        <h5 class="card-text">MSPR: <%= motorcycle.mspr %></h5>
-        <h5 class="card-text">Horsepower: <%= motorcycle.horsepower %></h5>
-        <a href="/motorcycles/<%= motorcycle._id %>">Details</a>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Make: <%= motorcycle.make %></h5>
+          <h5 class="card-subtitle mb-2">Model: <%= motorcycle.model %></h5>
+          <h5 class="card-text">MSPR: <%= motorcycle.mspr %></h5>
+          <h5 class="card-text">Horsepower: <%= motorcycle.horsepower %></h5>
+          <a href="/motorcycles/<%= motorcycle._id %>">Details</a>
+        </div>
       </div>
-    </div>
     <% }) %>
   </section>
 </main>

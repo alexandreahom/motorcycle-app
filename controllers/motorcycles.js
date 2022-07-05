@@ -83,6 +83,20 @@ function deleteMoto(req, res) {
   })
 }
 
+function update(req, res) {
+  for (let key in req.body) {
+    if (req.body[key] === '') delete req.body[key]
+	}
+  Motorcycle.findByIdAndUpdate(req.params.id, req.body, {new: true})
+  .then(motorcycle => {
+    res.redirect(`/motorcycles/${motorcycle._id}`)
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/")
+  })
+}
+
 export {
   index,
   create,
@@ -91,4 +105,5 @@ export {
   edit,
   deleteMoto as delete,
   createReview,
+  update
 }
