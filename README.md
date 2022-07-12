@@ -12,7 +12,7 @@ Edit/delete your own motorcycle.
 
 Deployment: https://alexandrea-motorcycle-app.herokuapp.com/
 
-## Teachnologies Used
+## Technologies Used
 
 - HTML
 
